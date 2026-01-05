@@ -15,7 +15,7 @@ const PastPost = (props) => {
 
     return (
       <>
-        {prevPost.id} {prevPost.title}
+        {prevPost.id}) {prevPost.title}
       </>
     )
   }

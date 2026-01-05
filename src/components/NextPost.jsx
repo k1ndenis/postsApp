@@ -15,7 +15,7 @@ const NextPost = (props) => {
 
     return (
       <>
-        {nextPost.id} {nextPost.title}
+        {nextPost.id}) {nextPost.title}
       </>
     )
   }

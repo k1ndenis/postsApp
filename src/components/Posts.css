@@ -1,0 +1,29 @@
+.posts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  list-style-type: none;
+  text-align: left;
+  margin-left: 15%;
+  display: flex;       
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+}
+
+.post:hover {
+  transform: scale(1.1);
+}
+
+.post-title:hover {
+  box-shadow: 0 0 0.75rem rgb(155, 137, 137);
+  background-color: transparent;
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+
+.set-favourite-btn {
+  margin-left: 0.5rem;
+}

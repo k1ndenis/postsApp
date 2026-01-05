@@ -26,29 +26,16 @@ function App() {
         favouritePosts={favouritePosts}
         setFavouritePosts={setFavouritePosts}
       />
-      <br/>
-      <br/>
-      <PastPost 
-        posts={posts}
-        postId={postId}
-      />
       <MainPost 
         posts={posts}
         postId={postId}
         setPostId={setPostId}
       />
-      <NextPost
-        posts={posts}
-        postId={postId}
-      />
-      <br/>
-      <br/>
       <NextPastBtns
         posts={posts}
         postId={postId}
         setPostId={setPostId}
       />
-      <br/>
       <Posts 
         posts={posts}
         postId={postId}
