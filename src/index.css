@@ -13,9 +13,7 @@
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 2rem;
 }
 
 button {
@@ -27,3 +25,20 @@ button {
   border-radius: 2.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .element {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .element {
+    font-size: 12px;
+  }
+}

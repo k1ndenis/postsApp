@@ -1,12 +1,12 @@
 .posts-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0.5rem;
 }
 
 .post {
   list-style-type: none;
-  text-align: left;
-  margin-left: 15%;
   display: flex;       
   justify-content: space-between;
   align-items: center;
@@ -24,6 +24,45 @@
   padding: 0.5rem;
 }
 
+.favourite-post-title:hover {
+  box-shadow: 0 0 0.75rem rgb(250, 205, 4);
+  background-color: transparent;
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+
 .set-favourite-btn {
+  margin-left: 0.1rem;
+}
+
+.set-favourite-btn:hover {
+  box-shadow: 0 0 0.5rem rgb(250, 205, 4);
+}
+
+.edit-btn {
   margin-left: 0.5rem;
+}
+
+.edit-btn:hover {
+  box-shadow: 0 0 0.5rem rgb(155, 137, 137);
+}
+
+.posts-button-container {
+  margin-bottom: 0.75rem;
+}
+
+.posts-button-container:hover {
+  transform: scale(1.05);
+}
+
+.posts-button:hover {
+  transform: scale(1.15);
+}
+
+.editing-input {
+  width: 40rem;
+  padding: 0.4rem;
+  font-size: large;
+  margin: 1rem;
+  border-radius: 4rem;
 }

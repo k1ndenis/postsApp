@@ -1,0 +1,24 @@
+.switch-buttons {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.switch-buttons:hover {
+  transform: scale(1.05);
+}
+
+.past-button {
+  margin-right: 1.5rem;
+}
+
+.past-button:hover {
+  transform: scale(1.15);
+}
+
+.next-button {
+  margin-left: 1.5rem;
+}
+
+.next-button:hover {
+  transform: scale(1.15);
+}

@@ -3,7 +3,7 @@ import './FavouritePosts.css'
 const FavouritePosts = (props) => {
   const { favouritePosts, setFavouritePosts } = props;
 
-  function removeFavourite(index) {
+  const removeFavourite = (index) => {
     const updatedFavourites = [...favouritePosts];
     updatedFavourites.splice(index, 1);
     setFavouritePosts(new Set(updatedFavourites))
@@ -30,7 +30,6 @@ const FavouritePosts = (props) => {
       )
     })
 
-
   return (
     <div className='favourites-container'>
       {favourites.length > 0
@@ -41,9 +40,9 @@ const FavouritePosts = (props) => {
           </>
         )
         : (
-          <>
+          <h4 className='header'>
             Вы пока что не добавили ни одного поста в избранное
-          </>
+          </h4>
         )
       }
       

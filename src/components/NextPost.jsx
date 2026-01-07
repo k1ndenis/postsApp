@@ -1,7 +1,7 @@
 import React from "react"
 
 const NextPost = (props) => {
-  const { posts, postId } = props;
+  const { posts, postId, favouritePosts } = props;
 
 
   const nextPost = () => {
@@ -14,9 +14,16 @@ const NextPost = (props) => {
     const nextPost = posts[nextPostId];
 
     return (
-      <>
+      <span
+        style={{
+          color: [...favouritePosts].includes(posts[postId + 1])
+            ? "gold"
+            : ""
+          }
+        }
+      >
         {nextPost.id}) {nextPost.title}
-      </>
+      </span>
     )
   }
     

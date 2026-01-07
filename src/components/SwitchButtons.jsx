@@ -1,14 +1,16 @@
-const NextPastBtns = (props) => {
+import './SwitchButtons.css'
+
+const SwitchButtons = (props) => {
   const { posts, postId, setPostId } = props;
 
-  function getNextPost() {
+  const getNextPost = () => {
     if (postId != posts.length - 1) {
       setPostId(postId + 1)
     } else {
       setPostId(0)
     }
   }
-  function getPastPost() {
+  const getPastPost = () => {
     if (postId != 0) {
       setPostId(postId - 1)
     } else {
@@ -17,19 +19,21 @@ const NextPastBtns = (props) => {
   }
 
   return (
-    <>
+    <div className="switch-buttons">
       <button
-        onClick={getPastPost}
+        className='past-button'
+        onClick={() => setTimeout(getPastPost, 100)}
       >
         Предыдуший пост
       </button>
       <button
-        onClick={getNextPost}
+        className='next-button'
+        onClick={() => setTimeout(getNextPost, 100)}
       >
         Следующий пост
       </button>
-    </>
+    </div>
   )
 }
 
-export default NextPastBtns
+export default SwitchButtons

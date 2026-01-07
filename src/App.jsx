@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import MainPost from './components/MainPost';
 import Posts from './components/Posts';
-import PastPost from './components/PastPost';
-import NextPost from './components/NextPost';
-import NextPastBtns from './components/NextPastBtns';
 import FavouritePosts from './components/FavouritePosts';
+import SwitchButtons from './components/SwitchButtons';
 
 function App() {
 
@@ -18,6 +16,7 @@ function App() {
       fetch(url)
         .then((respone) => respone.json())
         .then((data) => setPosts(data))
+        .catch((error) => console.log("Error: " + error))
     }, []);
 
   return (
@@ -30,14 +29,16 @@ function App() {
         posts={posts}
         postId={postId}
         setPostId={setPostId}
+        favouritePosts={favouritePosts}
       />
-      <NextPastBtns
+      <SwitchButtons
         posts={posts}
         postId={postId}
         setPostId={setPostId}
       />
-      <Posts 
+      <Posts
         posts={posts}
+        setPosts={setPosts}
         postId={postId}
         setPostId={setPostId}
         favouritePosts={favouritePosts}
