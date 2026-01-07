@@ -29,13 +29,13 @@
     width: 90%;
     height: auto;
     padding: 5%;
-    font-size: 150%;
+    font-size: 112.5%;
   }
 }
 
 @media (max-width: 480px) {
   .main-container {
     width: 95%;
-    font-size: 130%;
+    font-size: 97.5%;
   }
 }
