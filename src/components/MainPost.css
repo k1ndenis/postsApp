@@ -23,3 +23,19 @@
 .loading-gif {
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    width: 95%;
+    font-size: 130%;
+  }
+}
