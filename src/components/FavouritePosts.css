@@ -1,13 +1,12 @@
 .favourites-container {
   margin: 0 auto;
-  width: 55%;
+  width: 50%;
   justify-content: center;
   border: 2px solid yellow;
   padding: 2rem;
-  padding-top: 0rem;
   box-shadow: 0 0 1.75rem rgb(250, 205, 4);
   border-radius: 1.5rem;
-  font-size: 115%;
+  font-size: 1.2vw;
 }
 
 .favourites-container:hover {
@@ -17,6 +16,9 @@
 .favourite-post {
   color: goldenrod;
   list-style-type: none;
+  justify-content: space-between;
+  padding: 1%;
+  text-decoration: underline;
 }
 
 .removeBtn {
@@ -24,8 +26,8 @@
   border: none;
   padding: 0.4rem 0.4rem;
   border-radius: 100%;
-  font-size: 0.85rem;
-  margin-left: 0.3rem;
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
 }
 
 .removeBtn:hover {
@@ -41,4 +43,5 @@
   font-style: italic;
   text-decoration: underline;
   letter-spacing: 0.1rem;
+  font-size: 1.25vw;
 }
