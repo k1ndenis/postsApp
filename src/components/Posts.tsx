@@ -10,16 +10,16 @@ const Posts: React.FC<PostsProps> = ({
   favouritePosts,
   setFavouritePosts
 }) => {
-  
+
   const [isClicked, click] = useState<boolean>(false);
   const [isEditingIndex, setEditingIndex] = useState<number | null>(null);
   const [currentValue, setCurrentValue] = useState<string>("");
 
   type InputChange = React.ChangeEvent<HTMLInputElement>;
   type InputKeyDown = React.KeyboardEvent<HTMLInputElement>;
-  
+
   const getPostsList = () => {
-    click(!isClicked);
+    if (posts.length > 0) click(!isClicked);
   }
 
   const handleEdit = (index: number) => {
