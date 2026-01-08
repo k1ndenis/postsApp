@@ -1,12 +1,18 @@
 import React from "react"
-import { PostsProps } from './../types/types'
+import { Post } from './../types/types'
 
-const NextPost: React.FC<PostsProps> = ({
+interface NextPostProps {
+  posts: Post[];
+  postId: number;
+  favouritePosts: Set<Post>;
+}
+
+const NextPost: React.FC<NextPostProps> = ({
   posts,
   postId,
   favouritePosts
 }) => {
-  
+
   const nextPost = () => {
     if (posts.length == 0) return null;
 

@@ -15,9 +15,9 @@ function App() {
   useEffect(() => {
       const url = "https://jsonplaceholder.typicode.com/albums/1/photos";
       fetch(url)
-        .then((respone) => respone.json())
-        .then((data) => setPosts(data))
-        .catch((error) => console.log("Error: " + error))
+        .then((response) => response.json())
+        .then((data: Post[]) => setPosts(data))
+        .catch((error: Error) => console.log("Error: ", error))
     }, []);
 
   return (

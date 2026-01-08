@@ -2,15 +2,9 @@ import PastPost from "./PastPost";
 import NextPost from "./NextPost";
 import './MainPost.css'
 import loadingGif from './../images/loading.gif'
-import { Post } from './../types/types'
+import { MainPostProps } from './../types/types'
 
-interface NextPostProps {
-  posts: Post[];
-  postId: number;
-  favouritePosts: Set<Post>;
-}
-
-const MainPost: React.FC<NextPostProps> = ({
+const MainPost: React.FC<MainPostProps> = ({
   posts,
   postId,
   favouritePosts

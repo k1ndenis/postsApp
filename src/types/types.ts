@@ -13,3 +13,20 @@ export interface PostsProps {
   favouritePosts: Set<Post>;
   setFavouritePosts: SetStateFunction<Set<Post>>;
 }
+
+export interface FavouritePostsProps {
+  favouritePosts: Set<Post>;
+  setFavouritePosts: SetStateFunction<Set<Post>>;
+}
+
+export interface MainPostProps {
+  posts: Post[];
+  postId: number;
+  setPostId: SetStateFunction<number>;
+  favouritePosts: Set<Post>;
+}
+export interface SwitchButtonsProps {
+  posts: Post[];
+  postId: number;
+  setPostId: SetStateFunction<number>;
+}

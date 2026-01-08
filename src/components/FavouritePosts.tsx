@@ -1,7 +1,7 @@
 import './FavouritePosts.css'
-import { PostsProps } from './../types/types'
+import { FavouritePostsProps } from './../types/types'
 
-const FavouritePosts: React.FC<PostsProps> = ({
+const FavouritePosts: React.FC<FavouritePostsProps> = ({
   favouritePosts,
   setFavouritePosts
 }) => {

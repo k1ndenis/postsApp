@@ -1,7 +1,7 @@
 import './SwitchButtons.css'
-import { PostsProps } from './../types/types'
+import { SwitchButtonsProps } from './../types/types'
 
-const SwitchButtons: React.FC<PostsProps> = ({
+const SwitchButtons: React.FC<SwitchButtonsProps> = ({
   posts,
   postId,
   setPostId
