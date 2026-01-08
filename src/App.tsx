@@ -4,12 +4,13 @@ import MainPost from './components/MainPost';
 import Posts from './components/Posts';
 import FavouritePosts from './components/FavouritePosts';
 import SwitchButtons from './components/SwitchButtons';
+import { Post } from './types/types'
 
 function App() {
 
-  const [posts, setPosts] = useState([]);
-  const [postId, setPostId] = useState(0)
-  const [favouritePosts, setFavouritePosts] = useState(new Set([]))
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [postId, setPostId] = useState<number>(0)
+  const [favouritePosts, setFavouritePosts] = useState<Set<Post>>(new Set([]))
 
   useEffect(() => {
       const url = "https://jsonplaceholder.typicode.com/albums/1/photos";

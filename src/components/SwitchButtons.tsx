@@ -1,7 +1,11 @@
 import './SwitchButtons.css'
+import { PostsProps } from './../types/types'
 
-const SwitchButtons = (props) => {
-  const { posts, postId, setPostId } = props;
+const SwitchButtons: React.FC<PostsProps> = ({
+  posts,
+  postId,
+  setPostId
+}) => {
 
   const getNextPost = () => {
     if (postId != posts.length - 1) {

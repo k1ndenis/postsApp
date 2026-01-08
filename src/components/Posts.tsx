@@ -1,43 +1,51 @@
 import { useState } from "react";
 import './Posts.css'
+import { PostsProps } from '../types/types.ts'
 
-const Posts = (props) => {
-  const { 
-    posts, setPosts, postId, setPostId, favouritePosts, setFavouritePosts
-  } = props;
+const Posts: React.FC<PostsProps> = ({
+  posts,
+  setPosts,
+  postId,
+  setPostId,
+  favouritePosts,
+  setFavouritePosts
+}) => {
+  
+  const [isClicked, click] = useState<boolean>(false);
+  const [isEditingIndex, setEditingIndex] = useState<number | null>(null);
+  const [currentValue, setCurrentValue] = useState<string>("");
 
-  const [isClicked, click] = useState(false);
-  const [isEditingIndex, setEditingIndex] = useState(null);
-  const [currentValue, setCurrentValue] = useState("");
+  type InputChange = React.ChangeEvent<HTMLInputElement>;
+  type InputKeyDown = React.KeyboardEvent<HTMLInputElement>;
   
   const getPostsList = () => {
     click(!isClicked);
   }
 
-  const handleEdit = (index) => {
+  const handleEdit = (index: number) => {
     setEditingIndex(index);
     setCurrentValue(posts[index].title);
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: InputChange) => {
     const newValue = e.target.value;
     setCurrentValue(newValue);
   }
 
-  const handleSave = (index) => {
+  const handleSave = (index: number) => {
     const editedPosts = [...posts];
     editedPosts[index].title = currentValue;
     setPosts(editedPosts);
     setEditingIndex(null);
   }
 
-  const handleKeyDown = (e, index) => {
+  const handleKeyDown = (e: InputKeyDown, index: number) => {
     if (e.key === 'Enter') {
       handleSave(index)
     }
   }
 
-  const setFavourite = (index) => {
+  const setFavourite = (index: number) => {
     const favouritePost = posts[index]
     const favourites = [...favouritePosts];
     if (favourites.includes(favouritePost)) {

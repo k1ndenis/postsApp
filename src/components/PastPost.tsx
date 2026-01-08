@@ -1,8 +1,17 @@
 import React from "react"
+import { Post } from './../types/types'
 
-const PastPost = (props) => {
-  const { posts, postId, favouritePosts } = props;
+interface PastPostProps {
+  posts: Post[];
+  postId: number;
+  favouritePosts: Set<Post>;
+}
 
+const PastPost: React.FC<PastPostProps> = ({
+  posts,
+  postId,
+  favouritePosts
+}) => {
 
   const pastPost = () => {
     if (posts.length == 0) return null;

@@ -2,9 +2,19 @@ import PastPost from "./PastPost";
 import NextPost from "./NextPost";
 import './MainPost.css'
 import loadingGif from './../images/loading.gif'
+import { Post } from './../types/types'
 
-const MainPost = (props) => {
-  const { posts, postId, favouritePosts } = props;
+interface NextPostProps {
+  posts: Post[];
+  postId: number;
+  favouritePosts: Set<Post>;
+}
+
+const MainPost: React.FC<NextPostProps> = ({
+  posts,
+  postId,
+  favouritePosts
+}) => {
 
   const pagePost = posts.length > 0 
     ? (

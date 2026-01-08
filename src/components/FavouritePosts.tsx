@@ -1,9 +1,12 @@
 import './FavouritePosts.css'
+import { PostsProps } from './../types/types'
 
-const FavouritePosts = (props) => {
-  const { favouritePosts, setFavouritePosts } = props;
+const FavouritePosts: React.FC<PostsProps> = ({
+  favouritePosts,
+  setFavouritePosts
+}) => {
 
-  const removeFavourite = (index) => {
+  const removeFavourite = (index: number) => {
     const updatedFavourites = [...favouritePosts];
     updatedFavourites.splice(index, 1);
     setFavouritePosts(new Set(updatedFavourites))
