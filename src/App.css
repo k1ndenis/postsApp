@@ -4,3 +4,19 @@
   text-align: center;
   word-wrap: break-word;
 }
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.column {
+  margin-right: 5rem;
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

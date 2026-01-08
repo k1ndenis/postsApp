@@ -4,14 +4,14 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  width: 70%;
-  height: 25rem;
+  width: 50vw;
+  height: fit-content;
   box-shadow: 0 0 1.5rem rgb(129, 129, 129);
   margin-top: 6%;
-  margin-bottom: 2.5%;
+  margin-bottom: 6%;
   border-radius: 1.5rem;
-  padding: 15%;
-  font-size: 1.75vw;
+  padding: 5%;
+  font-size: 1rem;
   word-wrap: break-word;
 }
 
@@ -26,7 +26,7 @@
 @media (max-width: 768px) {
   .main-container {
     width: 90%;
-    padding: 5%;
+    padding: 7vw;
     font-size: 112.5%;
   }
 }

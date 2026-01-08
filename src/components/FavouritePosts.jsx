@@ -31,22 +31,27 @@ const FavouritePosts = (props) => {
     })
 
   return (
-    <div className='favourites-container'>
+    <>
       {favourites.length > 0
         ? (
-          <>
+          <div className='favourites-container'>
             <h2 className='header'>Избранные посты</h2>
             {favourites}
-          </>
+          </div>
         )
         : (
-          <h4 className='header'>
+          <h4 
+            className='header'
+            style={{
+              width: '50%',
+              fontSize: '2.5vw'
+            }}
+          >
             Вы пока что не добавили ни одного поста в избранное
           </h4>
         )
       }
-      
-    </div>
+    </>
   )
 }
 

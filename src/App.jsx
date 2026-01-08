@@ -20,31 +20,35 @@ function App() {
     }, []);
 
   return (
-    <>
+    <div className='app-container'>
       <FavouritePosts
         favouritePosts={favouritePosts}
         setFavouritePosts={setFavouritePosts}
       />
-      <MainPost 
-        posts={posts}
-        postId={postId}
-        setPostId={setPostId}
-        favouritePosts={favouritePosts}
-      />
-      <SwitchButtons
-        posts={posts}
-        postId={postId}
-        setPostId={setPostId}
-      />
-      <Posts
-        posts={posts}
-        setPosts={setPosts}
-        postId={postId}
-        setPostId={setPostId}
-        favouritePosts={favouritePosts}
-        setFavouritePosts={setFavouritePosts}
-      />
-    </>
+      <span className='column'>
+        <span className='main-block'>
+          <MainPost
+            posts={posts}
+            postId={postId}
+            setPostId={setPostId}
+            favouritePosts={favouritePosts}
+          />
+          <SwitchButtons
+            posts={posts}
+            postId={postId}
+            setPostId={setPostId}
+          />
+        </span>
+        <Posts
+          posts={posts}
+          setPosts={setPosts}
+          postId={postId}
+          setPostId={setPostId}
+          favouritePosts={favouritePosts}
+          setFavouritePosts={setFavouritePosts}
+        />
+      </span>
+    </div>
   )
 }
 
