@@ -5,12 +5,28 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: linear-gradient(
+    270deg,
+    #1a1a1a,
+    #2e2e2e,
+    #3c3c3c,
+    #2e2e2e,
+    #1a1a1a
+    );
+  background-size: 1000% 1000%;
+  animation: gradientShift 60s ease-in-out infinite;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 body {
