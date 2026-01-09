@@ -19,6 +19,8 @@ const Posts: React.FC<PostsProps> = ({
   type InputChange = React.ChangeEvent<HTMLInputElement>;
   type InputKeyDown = React.KeyboardEvent<HTMLInputElement>;
 
+  const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
   const handleEdit = (index: number) => {
     setEditingIndex(index);
     setCurrentValue(posts[index].title);
@@ -76,7 +78,7 @@ const Posts: React.FC<PostsProps> = ({
                 color: isFavourite ? "gold" : "white",
                 boxShadow: isFavourite
                   ? "0 0 1.5rem rgb(250, 205, 4)"
-                  : "0 0 1.5rem rgb(155, 137, 137)"
+                  : "0 0 1.5rem rgb(155, 137, 137)",
               }}
             />
           ) : (
@@ -87,11 +89,14 @@ const Posts: React.FC<PostsProps> = ({
             >
               {index === postId ? (
                 <strong
-                  style={{
+                  style={isChrome 
+                    ? {
+                    color: "white"
+                  } : {
                     color: isFavourite ? "transparent" : "white",
                     background: "linear-gradient(45deg, white, #FFD700)",
                     backgroundClip: "text",
-                    WebkitBackgroundClip: "text"
+                    WebkitBackgroundClip: "text",
                   }}
                 >
                   {post.id}) {post.title}
