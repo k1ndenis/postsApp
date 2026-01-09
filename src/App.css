@@ -18,7 +18,13 @@
 }
 
 .column {
-  margin-right: 5rem;
+  margin-right: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .column {
+    margin-right: 5rem;
+  }
 }
 
 .main-block {
