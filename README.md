@@ -1,16 +1,25 @@
-# React + Vite
+Post Viewer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  Описание проекта
+    Post Viewer App - это веб-приложение, которое позволяет просматривать и редактировать список постов, получаемых с внешнего API (jsonplaceholder). Приложение позволяет пользователю добавлять посты в избранное и удалять их, а также переключаться между постами.
 
-Currently, two official plugins are available:
+  Основные функции
+    -Просмотр списка постов
+    -Добавление и удаление постов в избранное
+    -Редактирование постов
+    -Обработка ошибок и взаимодействие с внешним API
+    -Кроссбраузерность и кроссплатформенность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  Технологии:
+    -React
+    -JavaScript
+    -TypeScript
+    -HTML
+    -CSS
+    -API
+    -LocalStorage
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  Используемые методы:
+    -useState и useEffect для работы с состоянием и эффектами
+    -Рендеринг динамических данных на основе состояния
+    -Управление избранными постами с помощью Set для уникальности элементов
