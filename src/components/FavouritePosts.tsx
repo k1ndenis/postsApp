@@ -47,7 +47,7 @@ const FavouritePosts: React.FC<FavouritePostsProps> = ({
             className='header'
             style={{
               width: '50%',
-              fontSize: '2.5vw'
+              fontSize: '2.5vw',
             }}
           >
             Вы пока что не добавили ни одного поста в избранное

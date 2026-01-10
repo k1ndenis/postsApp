@@ -20,6 +20,7 @@ const Posts: React.FC<PostsProps> = ({
   type InputKeyDown = React.KeyboardEvent<HTMLInputElement>;
 
   const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  const isTouchDevice = 'ontouchstart' in window;
 
   const handleEdit = (index: number) => {
     setEditingIndex(index);
@@ -54,7 +55,7 @@ const Posts: React.FC<PostsProps> = ({
   const handleMouseEnter = () => !isClicked && setHovered(true);
   const handleMouseLeave = () => !isClicked && setHovered(false);
 
-  const shouldShowPosts = isClicked || (!isClicked && isHovered);
+  const shouldShowPosts = isClicked || (!isTouchDevice && !isClicked && isHovered);
 
   const postsList = posts.map((post, index) => {
     const isFavourite = favouritePosts.has(post);

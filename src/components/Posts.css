@@ -18,6 +18,12 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .post:hover {
+    transform: none;
+  }
+}
+
 .post-title:hover {
   box-shadow: 0 0 0.75rem rgb(155, 137, 137);
   background-color: transparent;
@@ -56,8 +62,14 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .posts-button-container:hover {
+    transform: none;
+  }
+}
+
 .posts-button:hover {
-  transform: scale(1.15);
+  transform: scale(1.025);
 }
 
 .editing-input {
@@ -66,4 +78,10 @@
   font-size: large;
   margin: 1rem;
   border-radius: 4rem;
+}
+
+@media (max-width: 768px) {
+  .editing-input {
+    width: 65vw;
+  }
 }

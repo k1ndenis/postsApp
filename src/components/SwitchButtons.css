@@ -10,12 +10,18 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .switch-buttons:hover {
+    transform: none;
+  }
+}
+
 .past-button {
   margin-right: 1.5rem;
 }
 
 .past-button:hover {
-  transform: scale(1.15);
+  transform: scale(1.025);
 }
 
 .next-button {
@@ -23,5 +29,5 @@
 }
 
 .next-button:hover {
-  transform: scale(1.15);
+  transform: scale(1.025);
 }
