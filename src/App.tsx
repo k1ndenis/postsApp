@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import MainPost from './components/MainPost';
-import Posts from './components/Posts';
-import FavouritePosts from './components/FavouritePosts';
-import SwitchButtons from './components/SwitchButtons';
+import MainPost from './ui/MainPost';
+import Posts from './ui/Posts';
+import FavouritePosts from './ui/FavouritePosts';
+import SwitchButtons from './ui/SwitchButtons';
 import { Post } from './types/types'
 
 function App() {
